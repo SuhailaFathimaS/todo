@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const todos = [];
         todoList.querySelectorAll('li').forEach(li => {
             todos.push({
-                text: li.textContent.slice(0, -1), // Remove the delete button text
+                text: li.childNodes[0].textContent,
                 completed: li.classList.contains('completed')
             });
         });
